@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector <long long> vec;
+
+int i, j, n, p;
+bool first = false;
+int fv[100001];
+
+int main()
+{
+    ifstream cin("conducta.in");
+    ofstream cout("conducta.out");
+    
+    cin >> p >> n;
+    vec.resize(n);
+    
+    for(auto& i : vec)
+    {
+        cin >> i;
+        fv[i] ++;
+    }
+    
+    sort(vec.begin(), vec.end());
+    
+    if(p == 1)
+    {
+        cout << vec[0];
+    }
+	else
+	{
+		cout << vec[1];
+	}
+}
